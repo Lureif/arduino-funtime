@@ -1,7 +1,6 @@
 #include <FastLED.h>
 #include <stdlib.h>
 #include <stdio.h>
-define abs(x) (x < 0) ? -x : x
 
 #define LED_PIN A3
 #define NUM_LEDS 200
