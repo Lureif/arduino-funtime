@@ -5,6 +5,7 @@
 #define LED_PIN A3
 #define NUM_LEDS 200
 #define BRIGHTNESS 50
+
 CRGB	leds[NUM_LEDS];
 
 void	setup()
@@ -32,3 +33,4 @@ void	loop()
 		i++;
 	}
 }
+
