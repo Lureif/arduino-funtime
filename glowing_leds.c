@@ -1,7 +1,9 @@
 #include <FastLED.h>
+#include <stdlib.h>
+#include <stdio.h>
+
 #define LED_PIN A3
 #define NUM_LEDS 200
-
 CRGB	leds[NUM_LEDS];
 
 void	setup()
@@ -19,9 +21,9 @@ void	loop()
 	i, r, g, b = 0;
 	while (i <= NUM_LEDS)
 	{
-		r += 5;
-		g += 5;
-		b += 5;
+		r = rand() % 100 + 1;
+		g = rand() % 100 + 1;
+		b = rand() % 100 + 1;		
 		leds[i] = CRGB(r, g, b);
 		FastLED.show();
 		delay(500);
