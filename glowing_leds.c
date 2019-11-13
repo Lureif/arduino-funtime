@@ -11,7 +11,20 @@ void	setup_led_strip()
 
 void	loop()
 {
-	leds[0] = CRGB(255, 0, 0);
-	FastLED.show();
-	delay(500);
+	unsigned int i;
+	unsigned int r;
+	unsigned int g;
+	unsigned int b;
+	
+	i, r, g, b = 0;
+	while (i <= NUM_LEDS)
+	{
+		r += 5;
+		g += 5;
+		b += 5;
+		leds[i] = CRGB(r, g, b);
+		FastLED.show();
+		delay(10);
+		i++;
+	}
 }
