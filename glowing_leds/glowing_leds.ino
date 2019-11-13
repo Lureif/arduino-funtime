@@ -4,11 +4,13 @@
 
 #define LED_PIN A3
 #define NUM_LEDS 200
+#define BRIGHTNESS 50
 CRGB	leds[NUM_LEDS];
 
 void	setup()
 {
 	FastLED.addLeds<WS2812, LED_PIN, GRB>(leds, NUM_LEDS);
+	FastLED.setBrightness(BRIGHTNESS);
 }
 
 void	loop()
